@@ -363,7 +363,7 @@ img.emoji {
 /*! giscus-specific styles */
 
 .gsc-tl-line {
-  @apply w-[2px] flex-shrink-0 absolute left-[30px] h-full top-0;
+  @apply w-[2px] shrink-0 absolute left-[30px] h-full top-0;
 
   background-color: var(--color-border-muted, var(--color-border-secondary));
 }
@@ -549,7 +549,7 @@ img.emoji {
 }
 
 .gsc-comment-box-buttons {
-  @apply inline-flex flex-shrink-0;
+  @apply inline-flex shrink-0;
 }
 
 .gsc-reply-box {
@@ -583,11 +583,11 @@ img.emoji {
 }
 
 .gsc-upvotes {
-  @apply flex-shrink-0 mr-2 text-center w-14;
+  @apply mr-2 text-center shrink-0 w-14;
 }
 
 .gsc-upvote-count {
-  @apply px-1 ml-[2px] overflow-x-hidden overflow-ellipsis text-xs leading-5 min-w-[26px] w-min mx-auto rounded-full;
+  @apply px-1 ml-[2px] overflow-x-hidden text-ellipsis text-xs leading-5 min-w-[26px] w-min mx-auto rounded-full;
 }
 
 .gsc-upvote-button {
@@ -656,7 +656,7 @@ img.emoji {
 }
 
 .gsc-reply-author-avatar {
-  @apply z-10 flex-shrink-0;
+  @apply z-10 shrink-0;
 }
 
 .gsc-reply-header {
