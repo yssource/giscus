@@ -122,7 +122,7 @@ export default function CommentBox({
   return !isReply || isReplyOpen ? (
     <form
       className={`color-bg-primary color-border-primary gsc-comment-box${
-        isReply ? '' : ' border rounded'
+        isReply ? '' : ' rounded border'
       }`}
       onSubmit={(event) => {
         event.preventDefault();
@@ -132,9 +132,9 @@ export default function CommentBox({
       <div className="color-bg-tertiary color-border-primary gsc-comment-box-tabs">
         <div className="mx-2 mb-[-1px] mt-2">
           <button
-            className={`px-4 py-2 border border-b-0 focus:outline-none ${
+            className={`border border-b-0 px-4 py-2 focus:outline-none ${
               !isPreview
-                ? 'color-text-primary color-bg-canvas rounded-t color-border-primary'
+                ? 'color-text-primary color-bg-canvas color-border-primary rounded-t'
                 : 'color-text-secondary border-transparent'
             }`}
             onClick={() => setIsPreview(false)}
@@ -143,9 +143,9 @@ export default function CommentBox({
             {t('write')}
           </button>
           <button
-            className={`px-4 py-2 border border-b-0 focus:outline-none ml-1 ${
+            className={`ml-1 border border-b-0 px-4 py-2 focus:outline-none ${
               isPreview
-                ? 'color-text-primary color-bg-canvas rounded-t color-border-primary'
+                ? 'color-text-primary color-bg-canvas color-border-primary rounded-t'
                 : 'color-text-secondary border-transparent'
             }`}
             onClick={() => setIsPreview(true)}
@@ -213,7 +213,7 @@ export default function CommentBox({
         <div className="gsc-comment-box-buttons">
           {isReply ? (
             <button
-              className="px-4 py-[5px] ml-1 border rounded-md btn"
+              className="btn ml-1 rounded-md border px-4 py-[5px]"
               onClick={() => setIsReplyOpen(false)}
               type="button"
             >
@@ -222,7 +222,7 @@ export default function CommentBox({
           ) : null}
           {token ? (
             <button
-              className="px-4 py-[5px] ml-1 border rounded-md items-center btn btn-primary"
+              className="btn btn-primary ml-1 items-center rounded-md border px-4 py-[5px]"
               type="submit"
               disabled={(token && !input.trim()) || isSubmitting}
             >
@@ -230,7 +230,7 @@ export default function CommentBox({
             </button>
           ) : (
             <a
-              className="px-4 py-[5px] ml-1 border hover:no-underline rounded-md inline-flex items-center btn btn-primary"
+              className="btn btn-primary ml-1 inline-flex items-center rounded-md border px-4 py-[5px] hover:no-underline"
               target="_top"
               href={loginUrl}
             >
@@ -247,7 +247,7 @@ export default function CommentBox({
           rel="nofollow noopener noreferrer"
           target="_blank"
           href={viewer.url}
-          className="flex items-center shrink-0"
+          className="flex shrink-0 items-center"
         >
           <img
             className="inline-block rounded-full"
@@ -259,7 +259,7 @@ export default function CommentBox({
         </a>
       ) : null}
       <button
-        className="w-full px-2 py-1 ml-2 text-left border rounded cursor-text form-control color-text-secondary color-border-primary"
+        className="form-control color-text-secondary color-border-primary ml-2 w-full cursor-text rounded border px-2 py-1 text-left"
         onClick={handleReplyOpen}
         type="button"
       >

@@ -74,7 +74,7 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
               </a>
             )}
           </h4>
-          <div className="flex justify-center flex-auto mt-2 text-sm">
+          <div className="mt-2 flex flex-auto justify-center text-sm">
             <ReactButtons
               subjectId={data.discussion.id}
               reactionGroups={data.discussion.reactions}
@@ -114,7 +114,7 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
             </>
           ) : null}
           {shouldShowBranding ? (
-            <em className="text-sm color-text-secondary">
+            <em className="color-text-secondary text-sm">
               <Trans
                 i18nKey="common:poweredBy"
                 components={{
@@ -158,14 +158,14 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
           {data.numHidden > 0 ? (
             <div className="pagination-loader-container gsc-pagination">
               <button
-                className="flex flex-col items-center px-6 py-2 text-sm border rounded color-bg-primary color-border-primary"
+                className="color-bg-primary color-border-primary flex flex-col items-center rounded border px-6 py-2 text-sm"
                 onClick={increaseSize}
                 disabled={data.isLoadingMore}
               >
                 <span className="color-text-secondary">
                   {t('hiddenItems', { count: data.numHidden })}
                 </span>
-                <span className="font-semibold color-text-link">
+                <span className="color-text-link font-semibold">
                   {data.isLoadingMore ? t('loading') : t('loadMore')}…
                 </span>
               </button>
